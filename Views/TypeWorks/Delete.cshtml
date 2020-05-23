@@ -1,0 +1,25 @@
+﻿@model CoreReactLab.Models.TypeWork
+
+@{
+    Layout = "_Layout";
+}
+
+    <h3>Вы уверены что хотите удалить запись?</h3>
+    <div>
+        <h4>Тип работы</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.NameWork)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.NameWork)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="id" />
+            <input type="submit" value="Удалить" class="btn btn-danger" /> |
+            <a asp-action="Index">Назад</a>
+        </form>
+    </div>

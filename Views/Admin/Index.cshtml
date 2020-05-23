@@ -1,0 +1,17 @@
+﻿@model IEnumerable<CoreReactLab.Models.Admin>
+@{
+    ViewBag.Title = "Все Администраторы";
+}
+<a asp-action="Create">Добавить Администратора</a>
+<table class="table">
+    <tr><td>ФИО</td><td>Логин</td><td>Пароль</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.FIO</td><td>@item.login</td><td>@item.password</td>
+        <td>
+                <a asp-action="Edit" asp-controller="Admin" asp-route-id="@item.id">Изменить</a> 
+                <a asp-action="Delete" asp-controller="Admin" asp-route-id="@item.id">Удалить</a>
+            </td>
+        </tr>
+    }
+</table>

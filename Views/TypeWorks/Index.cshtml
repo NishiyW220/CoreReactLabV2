@@ -1,0 +1,32 @@
+﻿@model IEnumerable<CoreReactLab.Models.TypeWork>
+
+@{
+    Layout = "_Layout";
+}
+<p>
+    <a asp-action="Create">Добавить</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NameWork)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NameWork)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.id">Изменить</a> |
+                    <a asp-action="Delete" asp-route-id="@item.id">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

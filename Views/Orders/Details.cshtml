@@ -1,0 +1,65 @@
+﻿@model CoreReactLab.Models.Order
+
+@{
+    Layout = "_Layout";
+}
+
+
+<div>
+    <h4>Заказ</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.admin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.admin.FIO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.worker)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.worker.FIO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.typeWork)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.typeWork.NameWork)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FIO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FIO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VinNum)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VinNum)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CarName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CarName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TelNum)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TelNum)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Изменить</a> |
+    <a asp-action="Index">Назад</a>
+</div>
